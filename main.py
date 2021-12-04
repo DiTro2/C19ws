@@ -44,7 +44,11 @@ def korSzerint(min: int, max: int):
     """Kiírja a minimum és maximum életkor közötti elhunytakat"""
     for le in elhunytak:
         if len(le) > 3 and int(le[2]) >= min and int(le[2]) <= max:
+<<<<<<< HEAD
             print(le[0],le[1],le[2],le[3], sep=";")
+=======
+            print(le)
+>>>>>>> 6270d8adf49f57fce082df79b43881b9ec0a0596
 
 
 #korSzerint(90, 95)
