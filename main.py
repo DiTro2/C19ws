@@ -112,10 +112,10 @@ def csvAppend():
     if ujhalott > 3000: print("Ez elég sok! (Lehet nem kéne egyszerre frissíteni)")
     print("Ez", ujhalott / 50, "oldalnyi új elhunyt")
     enyitFrissit = int(input("Hány oldal új elhunytat szeretne hozzáfűzni a helyi listához?"))
-    utolsoOldal = int(lastPage()) - len(elhunytak) // 50 - 1
-    for old in range(utolsoOldal, utolsoOldal - enyitFrissit,
+    utolsoOldal = int(lastPage()) - (len(elhunytak) // 50)
+    for old in range(utolsoOldal, utolsoOldal - enyitFrissit - 1,
                      -1):
-        print(old, "-as számú oldal bányászása... cél:", utolsoOldal - enyitFrissit + 1)
+        print(old, "-as számú oldal bányászása... cél:", utolsoOldal - enyitFrissit)
         banya(old, int(elhunytak[-1][0]))
 
 
