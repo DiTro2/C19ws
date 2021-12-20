@@ -111,11 +111,10 @@ def csvAppend():
     ujhalott = lastRecord()  # lastRecord() meghívja a beolvas()-t, tehát az 'elhunytak' listához hozzáadódik ami a csv-ben van
     if ujhalott > 3000: print("Ez elég sok! (Lehet nem kéne egyszerre frissíteni)")
     print("Ez", ujhalott / 50, "oldalnyi új elhunyt")
-    enyitFrissit = int(input("Hány oldal új elhunytat szeretne hozzáfűzni a helyi listához?"))
+    enyitFrissit = int(input("Hány oldal új elhunytat szeretne hozzáfűzni a helyi listához? "))+1
     utolsoOldal = int(lastPage()) - (len(elhunytak) // 50)
-    for old in range(utolsoOldal, utolsoOldal - enyitFrissit - 1,
-                     -1):
-        print(old, "-as számú oldal bányászása... cél:", utolsoOldal - enyitFrissit)
+    for old in range(utolsoOldal, utolsoOldal - enyitFrissit, -1):
+        print(old, "-as számú oldal bányászása... cél:", utolsoOldal - enyitFrissit + 1)
         banya(old, int(elhunytak[-1][0]))
 
 
