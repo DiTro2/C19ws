@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/endori/PycharmProjects/C19ws/venv"
+VIRTUAL_ENV="/part/lemez/python/Pycharm_Projects/C19ws/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
